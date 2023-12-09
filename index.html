@@ -68,9 +68,18 @@
       <section class="dark-bg box-bg back">
         <div class="container box-center">
           <h1 class="top box-h-one">Effective Solutions for Your Business</h1>
-          <button class="button box-order-service" type="button">
+          <button
+            class="button box-order-service"
+            type="button"
+            data-modal-open
+          >
             Order Service
           </button>
+        </div>
+        <div class="backdrop is-hidden" data-modal>
+          <div class="modal">
+            <button type="button" class="close-btn" data-modal-close>X</button>
+          </div>
         </div>
       </section>
       <!-- section 2 -->
@@ -448,5 +457,7 @@
         </div>
       </div>
     </footer>
+
+    <script src="./js/modal.js"></script>
   </body>
 </html>

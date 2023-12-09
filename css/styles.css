@@ -536,3 +536,25 @@ ol {
 .svg-footer {
   fill: var(--color-white-2);
 }
+
+.is-hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+.backdrop:nth-child(1) {
+  flex-shrink: 0;
+  box-shadow: 0px 2px 1px 0px rgba(0, 0, 0, 0.2),
+    0px 1px 3px 0px rgba(0, 0, 0, 0.12), 0px 1px 1px 0px rgba(0, 0, 0, 0.14);
+  border-radius: 4px;
+  width: 408px;
+  height: 584px;
+  background-color: #31d0aa;
+  top: 30px;
+  left: 230px;
+  background-color: #ef233c;
+}
+.close-btn {
+  width: 24px;
+  height: 24px;
+}

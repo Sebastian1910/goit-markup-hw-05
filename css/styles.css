@@ -563,6 +563,7 @@ ol {
   fill: var(--color-white);
 }
 .modal {
+  margin-top: 80px;
   display: flex;
   justify-content: end;
   width: 408px;
@@ -587,6 +588,7 @@ ol {
   overflow: hidden;
 }
 .overlay {
+  padding: 40px 32px;
   background-color: var(--color-blue);
   font-family: Roboto;
   font-size: 16px;
@@ -605,4 +607,25 @@ ol {
 }
 .abcd:hover .overlay {
   transform: translateY(0);
+}
+.link-after::after {
+  content: '';
+
+  position: absolute;
+  width: 100%;
+  height: 4px;
+  left: 0;
+  bottom: -1px;
+  background-color: var(--color-blue);
+  border-radius: 2px;
+}
+*,
+::after,
+::before {
+  box-sizing: border-box;
+}
+.link-studio-porfolio {
+  position: relative;
+  color: var(--spherical-blue);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }

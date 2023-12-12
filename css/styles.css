@@ -53,7 +53,6 @@ body {
 }
 
 .link-studio:hover,
-.link-studio:active,
 .link-studio:focus {
   color: var(--color-dark-blue);
 }
@@ -64,6 +63,7 @@ body {
 
 .contacts {
   font-style: normal;
+  transition: color 250ms cubic-bezier(0.4, 0, 0, 2, 1);
 }
 
 .contact {
@@ -170,6 +170,10 @@ body {
   color: var(--color-blue);
   background-color: var(--color-white-2);
   cursor: pointer;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .button-two:hover,
@@ -262,6 +266,7 @@ ol {
   display: block;
   min-width: 169px;
   height: 56px;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .box-sestion-two {
@@ -339,6 +344,7 @@ ol {
 .box-link-footer {
   display: inline-block;
   margin-bottom: 16px;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .box-paragraph-footer {
   max-width: 264px;
@@ -386,11 +392,13 @@ ol {
 }
 .link-portfolio {
   display: block;
+  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .link-portfolio:hover,
 .link-portfolio:focus {
   box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
     0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+  transform: translateY(0%);
 }
 .container-div {
   padding: 32px 16px;
@@ -433,6 +441,8 @@ ol {
   align-items: center;
   justify-content: center;
   color: #8e8f99;
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .icon-link-five:hover,
@@ -546,42 +556,46 @@ ol {
     visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .close-btn {
-  flex-shrink: 0;
-  margin-top: 24px;
-  margin-right: 24px;
-  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  background-color: #e7e9fc;
   border: 1px solid rgba(0, 0, 0, 0.1);
   width: 24px;
   height: 24px;
   stroke-width: 1px;
+  border-radius: 50%;
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
     border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .close-btn:hover,
-.close-btn:active {
+.close-btn:focus {
   background-color: var(--color-dark-blue);
-  fill: var(--color-white);
+  border: none;
+  background-color: #404bbf;
+  border: none;
+  fill: #fff;
 }
 .modal {
-  position: relative;
-  top: 80px;
-  display: flex;
-  justify-content: end;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(1);
   width: 408px;
-  height: 584px;
+  min-height: 584px;
   border-radius: 4px;
   background: #fcfcfc;
   box-shadow: 0px 2px 1px 0px rgba(0, 0, 0, 0.2),
     0px 1px 3px 0px rgba(0, 0, 0, 0.12), 0px 1px 1px 0px rgba(0, 0, 0, 0.14);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .svg-close {
   fill: #2e2f42;
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-.svg-close:hover,
-.svg-close:active {
-  fill: var(--color-white);
 }
 
 .abcd {
@@ -597,7 +611,7 @@ ol {
   font-weight: 400;
   line-height: 24px;
   letter-spacing: 0.32px;
-  color: var(--color-white);
+  color: var(--color-white-2);
   position: absolute;
   top: 0;
   left: 0;
@@ -609,15 +623,14 @@ ol {
 .abcd:hover .overlay {
   transform: translateY(0);
 }
-.link-after::after {
+.link-studio-porfolio::after {
   content: '';
-
-  position: relative;
+  position: absolute;
   top: 20px;
   width: 100%;
   height: 4px;
   bottom: -1px;
-  background-color: var(--color-blue);
+  background-color: var(--color-dark-blue);
   border-radius: 2px;
 }
 *,
@@ -627,7 +640,6 @@ ol {
 }
 .link-studio-porfolio {
   position: relative;
-
-  color: var(--spherical-blue);
+  color: #404bbf;
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }

@@ -631,9 +631,12 @@ ol {
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .abcd:hover .overlay,
-.abcd:focus .overlay {
+.abcd:focus .overlay,
+.link-portfolio:hover .overlay,
+.link-portfolio:focus .overlay {
   transform: translateY(0);
 }
+
 .link-studio-porfolio::after {
   content: '';
   position: absolute;

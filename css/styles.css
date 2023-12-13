@@ -45,6 +45,7 @@ body {
 }
 
 .link-studio {
+  padding: 24px 0;
   font-weight: 500;
   font-size: 16px;
   line-height: 1.5;
@@ -63,14 +64,15 @@ body {
 
 .contacts {
   font-style: normal;
-  transition: color 250ms cubic-bezier(0.4, 0, 0, 2, 1);
 }
 
 .contact {
+  padding: 24px 0;
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.02em;
   color: var(--color-gray);
+  transition: color 250ms cubic-bezier(0.4, 0, 0, 2, 1);
 }
 
 .contact:hover,
@@ -220,7 +222,7 @@ ol {
 }
 .border-header {
   border-bottom: 1px solid #e7e9fc;
-  padding: 24px;
+  height: 72px;
   box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08),
     0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
 }
@@ -234,6 +236,11 @@ ol {
   align-items: center;
 }
 
+.box-list-address {
+  margin: 24px 0;
+  display: flex;
+  gap: 40px;
+}
 .box-address {
   margin-left: auto;
   font-style: normal;
@@ -344,7 +351,6 @@ ol {
 .box-link-footer {
   display: inline-block;
   margin-bottom: 16px;
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .box-paragraph-footer {
   max-width: 264px;
@@ -395,7 +401,7 @@ ol {
   transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .link-portfolio:hover,
-.link-portfolio:focus {
+.link-portfolio:target {
   box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
     0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
   transform: translateY(0%);
@@ -466,6 +472,7 @@ ol {
   border-radius: 50%;
   justify-content: center;
   align-items: center;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .box-list-icon-li {
   width: 40px;
@@ -533,6 +540,7 @@ ol {
   display: flex;
   justify-content: center;
   align-items: center;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .svg-footer {
   fill: var(--color-white-2);
@@ -626,18 +634,14 @@ ol {
 .link-studio-porfolio::after {
   content: '';
   position: absolute;
-  top: 20px;
+
   width: 100%;
   height: 4px;
   bottom: -1px;
   background-color: var(--color-dark-blue);
   border-radius: 2px;
 }
-*,
-::after,
-::before {
-  box-sizing: border-box;
-}
+
 .link-studio-porfolio {
   position: relative;
   color: #404bbf;
